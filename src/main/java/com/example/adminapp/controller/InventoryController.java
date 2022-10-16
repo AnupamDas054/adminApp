@@ -24,7 +24,7 @@ public class InventoryController {
         mav.addObject("inventory",list);
         return mav;
     }
-    
+
 
     @GetMapping("/addInventoryForm")
     public ModelAndView addEmployeeForm(){
@@ -33,6 +33,7 @@ public class InventoryController {
         mav.addObject("inventory",inventory);
         return mav;
     }
+
 
     @PostMapping("/saveInventory")
     public String saveInventory(@ModelAttribute Inventory inventory){
@@ -53,5 +54,4 @@ public class InventoryController {
         inventoryRepo.deleteById(inventoryId);
         return "redirect:/list";
     }
-
 }
